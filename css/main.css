@@ -1,0 +1,25 @@
+:root {
+    
+  /* 🟠 COR PRINCIPAL (ALUNO) */
+  --primary: #ff6600;
+  --primary-dark: #cc5200;
+  --primary-light: #ff944d;
+
+  /* NEUTROS */
+  --white: #ffffff;
+  --black: #000000;
+
+  /*  CINZAS */
+  --gray-100: #f5f5f5;  /* fundo leve */
+  --gray-200: #e0e0e0;  /* bordas */
+  --gray-300: #c2c2c2;
+  --gray-500: #7a7a7a;  /* texto secundário */
+  --gray-700: #3a3a3a;  /* texto principal */
+
+  /* BACKGROUNDS */
+  --bg-main: #f8f9fa;
+  --bg-card: #ffffff;
+
+  /* 🌫 SOMBRA */
+  --shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
