@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultar Horas</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/telaConsulta.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div>
+      <a href="#" class="voltar">← Voltar</a>
+
+      <h1 class="titulo">Consultar Horas</h1>
+      <p class="descricao">Acompanhe seu progresso nos projetos de extensão</p>
+    </div>
+
+    <!-- CARDS -->
+    <div class="cards">
+
+      <div class="card card-laranja">
+        <img src="../assets/clock-icon.png">
+        <h2 id="horas">--h</h2>
+        <p>Total das horas acumuladas</p>
+      </div>
+
+      <div class="card card-vermelho">
+        <img src="../assets/medal-icon.png">
+        <h2 id="projetos">--</h2>
+        <p>Projetos concluídos</p>
+      </div>
+
+    </div>
+
+    <!-- BARRA DE PROGRESSO -->
+    <div class="progresso-box">
+      <h1>Progresso</h1>
+
+      <div class="meta-box">
+        <div class="meta">
+          <span id="meta">Meta: -- horas</span>
+          <span class="percentual" id="percentual">--%</span>
+        </div>
+
+        <div class="barra">
+          <div class="barra-preenchida"></div>
+        </div>
+
+        <p class="restante" id="restante">Faltam --h para atingir a meta</p>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="../js/telaConsulta.js"></script>
+
+</body>
+</html>

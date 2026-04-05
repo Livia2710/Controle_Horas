@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  background-color: var(--bg-main);
+  font-family: var(--font-primary);
+}
+
+.container {
+  width: 80%;
+  margin: 40px auto;
+}
+
+/* HEADER */
+.titulo {
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.descricao {
+  color: var(--black);
+  margin: 20px 10px 40px 30px;
+}
+
+.voltar {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 50px;
+  margin: 50px 0;
+}
+
+.card {
+  flex: 1;
+  background: var(--bg-card);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.card p {
+  font-size: 25px;
+  margin: 2px;
+  font-weight: bold;
+}
+
+
+/* ESTILOS ESPECÍFICOS */
+.card-laranja {
+  border: 2px solid var(--primary);
+}
+
+.card-laranja h2 {
+  color: var(--primary);
+}
+
+.card-vermelho {
+  border: 2px solid var(--secondary);
+}
+
+.card-vermelho h2 {
+  color: var(--secondary);
+}
+
+/* PROGRESSO */
+.progresso-box {
+  border: 2px solid var(--black);
+  background: var(--bg-card);
+  padding: 10px 40px;
+  border-radius: 10px;
+}
+
+.progresso-box h1 {
+  color: var(--secondary);
+}
+
+.meta-box {
+  padding: 0 40px;
+  font-weight: bolder;
+}
+.meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.percentual {
+  color: var(--secondary);
+}
+
+/* BARRA */
+.barra {
+  width: 100%;
+  height: 60px;
+  background: var(--gray-light);
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.barra-preenchida {
+  width: 85%;
+  height: 100%;
+  background: var(--secondary);
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+}
+
+.restante {
+  color: #464646;
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+
+  .container {
+    width: 92%;
+    margin: 20px auto;
+  }
+
+  /* HEADER */
+  .titulo {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .descricao {
+    font-size: 14px;
+    margin: 10px 0 25px 0;
+    text-align: center;
+  }
+
+  .voltar {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
+  /* CARDS */
+  .cards {
+    flex-direction: column;
+    gap: 30px;
+    margin: 40px 0;
+  }
+
+  .card img {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+
+  .card h2 {
+    font-size: 30px;
+  }
+
+  .card p, .percentual, .restante {
+    font-size: 16px;
+  }
+
+  /* PROGRESSO */
+  .progresso-box {
+    padding: 20px;
+  }
+
+  .progresso-box h1 {
+    font-size: 24px;
+  }
+
+  .meta-box {
+    padding: 0;
+  }
+
+  .meta {
+    flex-direction: flex;
+    gap: 2px;
+    font-size: 16px;
+  }
+
+  /* BARRA */
+  .barra {
+    height: 25px;
+  }
+
+}
