@@ -77,6 +77,8 @@ body {
           &:focus {
             outline: 2px solid var(--gray-dark);
           }
+
+
         }
       }
 
@@ -96,6 +98,7 @@ body {
           color: var(--black);
           font-size: 1rem;
           font-weight: 500;
+          font-family: var(--font-primary);
 
           &::placeholder {
             color: var(--black);
@@ -105,6 +108,36 @@ body {
           &:focus {
             outline: 2px solid var(--gray-dark);
           }
+        }
+      }
+    }
+
+    & .action-group {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 5.5rem;
+
+      & button {
+        width: 100%;
+        padding: .75rem;
+
+        border-radius: .625rem;
+
+        font-size: 1.25rem;
+        font-weight: 600;
+        font-family: var(--font-primary);
+
+        &.outline {
+          background-color: transparent;
+          border: 3px solid var(--primary);
+          color: var(--primary);
+        }
+
+        &.primary {
+          background-color: var(--primary);
+          border: 3px solid var(--primary);
+          color: var(--white);
         }
       }
     }
