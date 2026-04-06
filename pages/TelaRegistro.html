@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de horas</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/telaRegistro.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header-container">
+        <a href="#" class="header-go-back">← Voltar</a>
+
+        <h1 class="header-title">Registrar Horas de Extensão</h1>
+    </header>
+
+    <main class="main-container">
+        <form action="#" method="POST" class="registration-form-container">
+            <div class="wrapper-container">
+                <div class="input-wrapper">
+                    <label for="extension-project">Qual o projeto?*</label>
+                    <input type="text" id="extension-project" name="extension-project"
+                        placeholder="Ex: Controle de horas" required>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="evidence">Comprovante:</label>
+                    <input type="file" id="evidence" name="evidence"
+                        placeholder="Insira um arquivo que comprove sua participação" required>
+                </div>
+
+                <div class="textarea-wrapper">
+                    <label for="observations">Observações:</label>
+                    <textarea rows="10" id="observations" name="observations"
+                        placeholder="Ex: Atividade realizada no evento X, com carga de 20h, auxiliando na organização e recepção..."></textarea>
+                </div>
+            </div>
+
+            <div class="action-group">
+                <button type="reset">Cancelar</button>
+                <button type="submit">Salvar arquivo</button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  background-color: var(--bg-main);
+  font-family: var(--font-primary);
+}
+
+/* HEADER */
+.header-container {
+  width: 90%;
+  margin: 2.5rem auto;
+
+  & .header-title {
+    margin-left: 2rem;
+    color: var(--primary);
+  }
+
+  & .header-go-back {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.main-container {
+  width: 70%;
+  margin: 2.5rem auto;
+
+  & label {
+    color: var(--black);
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  & .registration-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.25rem;
+
+    padding: 3.25rem 2.5rem;
+
+    border-radius: .625rem;
+    border: 3px solid var(--primary);
+
+    & .wrapper-container {
+      display: flex;
+      flex-direction: column;
+      gap: 7.25rem;
+
+      & .input-wrapper {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+
+        & input {
+          width: 100%;
+          padding: .75rem 1.125rem;
+
+          background-color: var(--gray-light);
+          border-radius: .625rem;
+          border: none;
+
+          color: var(--black);
+          font-size: 1rem;
+          font-weight: 500;
+
+          &::placeholder {
+            color: var(--black);
+            opacity: .5;
+          }
+
+          &:focus {
+            outline: 2px solid var(--gray-dark);
+          }
+        }
+      }
+
+      & .textarea-wrapper {
+        display: flex;
+        align-items: start;
+        gap: .75rem;
+
+        & textarea {
+          width: 100%;
+          padding: .75rem 1.125rem;
+
+          background-color: var(--gray-light);
+          border-radius: .625rem;
+          border: none;
+
+          color: var(--black);
+          font-size: 1rem;
+          font-weight: 500;
+
+          &::placeholder {
+            color: var(--black);
+            opacity: .5;
+          }
+
+          &:focus {
+            outline: 2px solid var(--gray-dark);
+          }
+        }
+      }
+    }
+  }
+}
