@@ -31,9 +31,11 @@
                     <label for="evidence">Comprovante:</label>
 
                     <div class="file-container">
-                        <span class="file-input-text" id="fileInputText">Insira um arquivo que comprove a participação</span>
+                        <span class="file-input-text" id="fileInputText">Insira um arquivo que comprove a
+                            participação</span>
                         <button type="button" class="file-input-button">Selecionar arquivo</button>
-                        <input type="file" id="evidence" name="evidence" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required>
+                        <input type="file" id="evidence" name="evidence" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                            required>
                     </div>
                 </div>
 
@@ -45,23 +47,13 @@
             </div>
 
             <div class="action-group">
-                <button type="reset" class="outline">Cancelar</button>
-                <button type="submit" class="primary">Salvar arquivo</button>
+                <button type="reset" class="outline" id="cancelButton">Cancelar</button>
+                <button type="submit" class="primary" id="saveButton">Salvar arquivo</button>
             </div>
         </form>
     </main>
 
-    <script>
-        // Atualizar o texto do arquivo selecionado
-        const fileInput = document.getElementById('evidence');
-        const fileInputText = document.getElementById('fileInputText');
-
-        fileInput.addEventListener('change', function() {
-            if (this.files && this.files[0]) {
-                fileInputText.textContent = this.files[0].name;
-            }
-        });
-    </script>
+    <script src="../js/telaRegistro.js"></script>
 </body>
 
 </html>
