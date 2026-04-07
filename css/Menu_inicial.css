@@ -1,0 +1,282 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo da página */
+body {
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+    
+    
+}
+.topo {
+    display: flex;
+    justify-content: space-between; /* Empurra o grupo de texto pra esquerda e o botão pra direita */
+    align-items: flex-start;       /* Alinha os itens pelo topo */
+    margin-bottom: 40px;
+}
+
+/* Título */
+.titulo {
+    color: #FF8800;
+    font-size: 50px;
+    margin-left: 3%;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo {
+    width: 335px;
+    margin-left: auto;
+    margin-right: 3%;
+    margin-top: -1%;
+}
+
+
+
+.btn-sair {
+    padding: 5px 25px;
+    border: 4px solid #ff7a00;
+    background: none;
+    color: #FF8800;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 3%;
+    margin-top: 40px;
+    width: 5%;
+    height: 6%;
+}
+
+.btn-sair:hover {
+    background-color: #ff7a00;
+    color: white;
+}
+
+/* Texto */
+.texto {
+    margin-top: 5%;
+    font-size: 25px;
+    margin-left: 3%;
+    align-items: flex-start;
+    margin-right: 50%;
+    position: absolute;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 350px;  
+}
+
+/* Card padrão */
+.card {
+    border-radius: 12px;
+    text-align: center;
+    padding: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 400px;
+    height: 220px;
+    
+    
+}
+
+/* Card lançar */
+.card-lancar {
+    border: 4px solid #FF8800;
+    color: #ff7a00;
+    margin-top: 5%;
+    height: 5%;
+    width:25%;
+    box-shadow: 25px 30px 35px 0px rgba(3, 3, 3, 0.373);
+}
+
+.card-lancar p{
+    color: black;
+    margin-top: 10%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-lancar h2{
+    font-size: 35px;
+}
+
+/* Card consultar */
+.card-consultar {
+    border: 4px solid #FD001A;
+    color: #ff2b2b;
+    margin-top: 5%;
+    height: 6%;
+    font-weight: bold;
+    width: 25%;
+    box-shadow: 25px 30px 35px 0px rgba(3, 3, 3, 0.373);
+}
+
+.card-consultar p{
+    color: black;
+    margin-top: 11%;
+    font-size: 20px;
+}
+
+.card-consultar h2{
+    font-size: 35px;
+}
+
+/* Hover nos cards */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Títulos dos cards */
+.card h2 {
+    margin-bottom: 15px;
+}
+
+/* Caixa de informações */
+.info {
+    border: 4px solid #444;
+    border-radius: 10px;
+    padding: 20px 20px 30px 20px;
+    max-width: 800px;   /* limita largura */
+    margin: 80px auto; /* centraliza + mantém espaço em cima */
+    
+}
+
+/* Título info */
+.info h3 {
+    color: #FD001A;
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+
+/* Lista */
+.info ul {
+    padding-left: 20px;
+    
+}
+
+.info li {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 2%;
+}
+
+.icone {
+    font-size: 100px; /* tamanho */
+    color: #ff7a00;   /* cor padrão do seu layout */
+    margin-bottom: 10px;
+}
+
+.icone-relogio {
+    color: orange;
+}
+
+.icone-relatorio {
+    color: #FD001A;
+}
+
+
+@media (max-width: 768px) {
+
+    /* Container */
+    .container {
+        padding: 15px;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    /* Topo */
+    .topo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        display: flex;
+    }
+
+    .titulo {
+        font-size: 40px;
+        margin-left: 10px;
+        
+        order: 1;
+    }
+
+    .btn-sair {
+        width: auto;
+        font-size: 16px;
+        margin-bottom: 30px;
+        order: 3;
+        align-self: flex-end;
+        margin-top: 30px;
+        
+    }
+
+    /* Texto */
+    .texto {
+        font-size: 18px;
+        padding: 0 0 0 0px;
+        order: 2;
+        margin-top: 10px;
+        position: relative;
+        margin-right: 50px;
+        
+        
+    }
+
+    /* Cards */
+    .cards {
+        flex-direction: column; /* empilha */
+        gap: 20px;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* ocupa quase toda tela */
+        height: auto;
+        padding: 25px;
+        max-width: 400px;
+        box-shadow: 5px 8px 10px 0px rgba(3, 3, 3, 0.373);
+    }
+
+    /* Ícones */
+    .icone {
+        font-size: 50px;
+    }
+
+    /* Info */
+    .info {
+        width: 90%;
+        margin: 60px auto;
+    }
+
+    .info h3 {
+        font-size: 18px;
+    }
+
+    .info li {
+        font-size: 14px;
+    }
+}
