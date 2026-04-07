@@ -29,8 +29,12 @@
 
                 <div class="input-wrapper">
                     <label for="evidence">Comprovante:</label>
-                    <input type="file" id="evidence" name="evidence"
-                        placeholder="Insira um arquivo que comprove sua participação" required>
+
+                    <div class="file-container">
+                        <span class="file-input-text" id="fileInputText">Insira um arquivo que comprove a participação</span>
+                        <button type="button" class="file-input-button">Selecionar arquivo</button>
+                        <input type="file" id="evidence" name="evidence" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required>
+                    </div>
                 </div>
 
                 <div class="textarea-wrapper">
@@ -46,6 +50,18 @@
             </div>
         </form>
     </main>
+
+    <script>
+        // Atualizar o texto do arquivo selecionado
+        const fileInput = document.getElementById('evidence');
+        const fileInputText = document.getElementById('fileInputText');
+
+        fileInput.addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+                fileInputText.textContent = this.files[0].name;
+            }
+        });
+    </script>
 </body>
 
 </html>
