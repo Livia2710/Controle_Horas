@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório de Projetos</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/tela-relatorio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="Menu_Inicial.html" class="btn-back">← Voltar</a>
+
+        <img src="../assets/logo.png" class="logo">
+    </header>
+
+    <!-- TITULO -->
+    <h1 class="titulo">Relatório de Projetos</h1>
+    <p class="subtitulo">
+        Visualização completa de todos os projetos de extensão realizados
+    </p>
+
+<div class="resumo">
+
+    <div class="card card-orange">
+        <div class="card-content">
+
+            <div class="icon-box">
+                <i class="fa-regular fa-clock icon"></i>
+            </div>
+
+            <div class="text">
+                <h2>170h</h2>
+                <p>Total das horas</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card card-red">
+        <div class="card-content">
+
+            <div class="icon-box">
+                <i class="fa-solid fa-award icon"></i>
+            </div>
+
+            <div class="text">
+                <h2>3</h2>
+                <p>Projetos concluídos</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+    <!-- TABELA -->
+    <div class="tabela-container">
+        <h3>Lista de Projetos Realizados</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Título do Projeto</th>
+                    <th>Professor(a)</th>
+                    <th>Semestre</th>
+                    <th>Descrição</th>
+                    <th>Horas</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Controle de Horas</td>
+                    <td>Luyra Benini</td>
+                    <td>3º</td>
+                    <td>Sistema de controle de horas...</td>
+                    <td class="highlight">50h</td>
+                </tr>
+
+                <tr>
+                    <td>Projeto Doar</td>
+                    <td>Luyra Benini</td>
+                    <td>2º</td>
+                    <td>Doação de um site para empresa...</td>
+                    <td class="highlight">30h</td>
+                </tr>
+
+                <!-- linhas vazias -->
+                <tr class="empty"><td colspan="5"></td></tr>
+                <tr class="empty"><td colspan="5"></td></tr>
+                <tr class="empty"><td colspan="5"></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- BOTÃO -->
+    <div class="footer">
+        <button class="btn-export">Exportar pdf</button>
+    </div>
+
+</div>
+
+</body>
+</html>

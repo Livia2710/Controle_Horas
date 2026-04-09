@@ -1,0 +1,181 @@
+/* BASE */
+body {
+    background: var(--bg-main);
+    font-family: var(--font-primary);
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+}
+
+.btn-back {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* TITULOS */
+.titulo {
+    color: var(--secondary);
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+.subtitulo {
+    margin: 10px 0 30px;
+    color: var(--black);
+    font-size: 14px;
+}
+
+/* CARDS */
+.resumo {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--white);
+    border: 2px solid;
+}
+/* CARD BASE */
+.card {
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--white);
+}
+
+/* CORES DAS BORDAS */
+.card-orange {
+    border-color: var(--primary);
+}
+
+.card-red {
+    border-color: var(--secondary);
+}
+
+/* LAYOUT INTERNO */
+.card-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ÍCONES (GRANDES E SEM FUNDO) */
+.icon {
+    font-size: 40px;
+}
+
+/* CORES DOS ÍCONES */
+.card-orange .icon {
+    color: var(--primary);
+}
+
+.card-red .icon {
+    color: var(--secondary);
+}
+
+/* NÚMEROS */
+.card-orange h2 {
+    color: var(--primary);
+    font-size: 32px;
+    margin: 0;
+}
+
+.card-red h2 {
+    color: var(--secondary);
+    font-size: 32px;
+    margin: 0;
+}
+
+/* TEXTO ABAIXO (PRETO) */
+.card p {
+    color: var(--black);
+    margin: 0;
+    font-size: 14px;
+}
+
+/* TABELA */
+.tabela-container {
+    border: 2px solid var(--black);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.tabela-container h3 {
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+td {
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+
+.highlight {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* LINHAS VAZIAS */
+.empty td {
+    height: 30px;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.btn-export {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+    .resumo {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+}

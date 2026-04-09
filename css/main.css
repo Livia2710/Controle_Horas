@@ -2,13 +2,13 @@
     
   /*  VARIÁVEIS GLOBAIS  (ALUNO) */
   --primary: #FF8800; /*Laranja*/
-  --primary-hover: #e67600;
+  --primary-hover: #ff7a00;
   --secondary: #FD001A; /*Vermelho*/
   --secondary-hover: #d90016;
 
   /* GRADIENTE DO LOGIN */
   --gradient-login: linear-gradient(
-    180deg,
+    135deg,
     #f87c00 47%,
     #ede4dc 96%
   );
@@ -33,7 +33,7 @@
   --font-primary: 'Instrument Sans', sans-serif;
 
   /* 🌫 SOMBRA */
-  --shadow: 0 2px 6px rgba(0,0,0,0.1);
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 body {

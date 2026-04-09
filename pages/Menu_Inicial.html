@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Controle de Horas</title>
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/Menu_inicial.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -18,11 +19,14 @@
 <div class="container">
 
     <div class="topo">
+        <div class="topo-texto">
         <h1 class="titulo">Controle de Horas</h1>
             
              <p class="texto">
-        Olá, Maria da Silva! O que você deseja fazer:
+        Olá, Maria da Silva! O que você deseja fazer
     </p>
+        </div>
+        
     <button class="btn-sair">Sair</button>
     </div>
 
@@ -30,29 +34,30 @@
 
     <div class="cards">
 
-        <div class="card card-lancar">
-    <i class="fa-solid fa-clock icone icone-relogio"></i>
-    <h2>Lançar Horas</h2>
-    <p>Registre as horas<br> dos seus projetos realizados.</p>
-</div>
+        <div class="card card-lancar"  id="cardLancar">
+            <i class="fa-solid fa-clock icone icone-relogio"></i>
+            <h2>Lançar Horas</h2>
+            <p>Registre as horas<br> dos seus projetos realizados.</p>
+        </div>
 
-<div class="card card-consultar">
-    <i class="fa-regular fa-file-lines icone icone-relatorio"></i>
-    <h2>Consultar Horas</h2>
-    <p>Visualize o total de horas e gere relatórios dos seus projetos.</p>
-</div>
+            <div class="card card-consultar" id="cardConsultar">
+            <i class="fa-regular fa-file-lines icone icone-relatorio"></i>
+            <h2>Consultar Horas</h2>
+            <p>Visualize o total de horas e gere relatórios dos seus projetos.</p>
+        </div>
 
     </div>
 
-    <div class="info">
-        <h3>Informações importantes:</h3>
-        <ul>
-            <li>Registre suas horas de extensão assim que concluir os projetos</li>
-            <li>Em caso de dúvidas, entre em contato com o seu orientador</li>
-        </ul>
-    </div>
+        <div class="info">
+            <h3>Informações importantes:</h3>
+            <ul>
+                <li>Registre suas horas de extensão assim que concluir os projetos</li>
+                <li>Em caso de dúvidas, entre em contato com o seu orientador</li>
+            </ul>
+        </div>
 
 </div>
 
+<script src="../js//menu.js"></script>
 </body>
 </html>

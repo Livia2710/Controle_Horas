@@ -137,6 +137,14 @@ body {
     cursor: pointer;
 }
 
+.card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+}
+
 /* Ajuste para telas menores */
 @media (max-width: 480px) {
     .logo img {

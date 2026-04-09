@@ -1,41 +1,46 @@
 const fileInput = document.getElementById('evidence');
 const fileInputText = document.getElementById('fileInputText');
 
-const registrationForm = document.querySelector('.registration-form-container');
-const cancelButton = document.getElementById('cancelButton');
-const saveButton = document.getElementById('saveButton');
+const form = document.querySelector('.registration-form-container');
+const cancelBtn = document.getElementById('cancelButton');
 
-// Atualizar o texto do arquivo selecionado
+const toast = document.getElementById("toast");
+
+// Atualizar nome do arquivo
 fileInput.addEventListener('change', function () {
     if (this.files && this.files[0]) {
         fileInputText.textContent = this.files[0].name;
     }
 });
 
-// Adicionar evento de clique ao botão de cancelar
-cancelButton.addEventListener('click', function () {
-    // Limpar o formulário
-    registrationForm.reset();
+// FUNÇÃO TOAST
+function showToast(message, type = "") {
+    toast.textContent = message;
+    toast.className = "toast show " + type;
 
-    // Resetar o texto do arquivo selecionado
+    setTimeout(() => {
+        toast.className = "toast";
+    }, 3000);
+}
+
+// CANCELAR
+cancelBtn.addEventListener('click', function () {
+    form.reset();
     fileInputText.textContent = 'Insira um arquivo que comprove a participação';
+
+    showToast("Ação cancelada", "cancel");
 });
 
-// Adicionar evento de clique ao botão de salvar
-saveButton.addEventListener('click', function (event) {
-    event.preventDefault(); // Evitar o envio do formulário
+// SALVAR (usa o submit do form)
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-    if (registrationForm.checkValidity()) {
-        // Aqui pode adicionar a lógica para processar os dados do formulário
-        // Por exemplo, enviar os dados para um servidor
-        alert('Dados salvos com sucesso!');
+    if (form.checkValidity()) {
+        showToast("Arquivo salvo com sucesso", "success");
 
-        // Limpar o formulário após salvar
-        registrationForm.reset();
-        // Resetar o texto do arquivo selecionado
+        form.reset();
         fileInputText.textContent = 'Insira um arquivo que comprove a participação';
     } else {
-        // Se o formulário não for válido, exibir uma mensagem de erro
-        alert('Por favor, preencha todos os campos obrigatórios.');
+        showToast("Preencha os campos obrigatórios", "error");
     }
 });

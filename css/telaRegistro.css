@@ -194,3 +194,43 @@ body {
     }
   }
 }
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  background-color: var(--black);
+  color: var(--white);
+
+  padding: 12px 18px;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+
+  transition: 0.3s;
+}
+
+/* VISÍVEL */
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.success {
+  background-color: var(--validado);
+}
+
+.toast.cancel {
+  background-color: var(--secondary);
+}
+
+.toast.error {
+  background-color: #ff4444;
+}
