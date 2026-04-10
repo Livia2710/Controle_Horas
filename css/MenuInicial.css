@@ -1,0 +1,275 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    background-color: var(--white);
+    font-family: var(--font-primary);
+}
+
+/* HEADER */
+.header-global {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* TOPO */
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+/* BLOCO TEXTO (resolve o "um embaixo do outro") */
+.topo-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 50px;
+}
+
+/* TITULO */
+.titulo {
+    color: var(--primary);
+    font-size: 32px;
+}
+
+/* TEXTO */
+.texto {
+    font-size: 18px;
+    color: var(--black);
+}
+
+/* BOTÃO */
+.btn-sair {
+    padding: 8px 20px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-sair:hover {
+    background-color: var(--primary-hover);
+    color: var(--white);
+    border-color: var(--primary-hover);
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+/* CARD BASE */
+.card {
+    border-radius: 12px;
+    text-align: center;
+    padding: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    max-width: 380px;
+    min-height: 220px;
+
+    background: var(--white);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08); /* sombra mais leve */
+}
+
+/* LANÇAR */
+.card-lancar {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+/* CONSULTAR */
+.card-consultar {
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+}
+
+/* TITULO CARD */
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* TEXTO CARD */
+.card p {
+    color: var(--black);
+    font-size: 16px;
+}
+
+/* HOVER */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ICONES */
+.icone {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.icone-relogio {
+    color: var(--primary);
+}
+
+.icone-relatorio {
+    color: var(--secondary);
+}
+
+/* INFO (QUADRADO PRETO AJUSTADO) */
+.info {
+    border: 2px solid var(--black);
+    border-radius: 10px;
+    padding: 25px;
+
+    max-width: 840px; /* alinhado com os cards */
+    margin: 70px auto 0 auto;
+
+    background: var(--white);
+}
+
+/* TITULO INFO */
+.info h3 {
+    color: var(--secondary);
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* LISTA */
+.info li {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-box {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 300px;
+
+    box-shadow: var(--shadow);
+}
+
+.modal-box h3 {
+    margin-bottom: 20px;
+}
+
+.modal-box .btn {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+}
+
+.btn.outline {
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+}
+
+.btn.close {
+    background: none;
+    border: none;
+    color: #777;
+}
+
+.modal-form {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+
+    box-shadow: var(--shadow);
+}
+
+/* RESPONSIVO REAL */
+@media (max-width: 768px) {
+
+    .header {
+        justify-content: center;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .topo {
+        flex-direction: column;
+    }
+
+    .btn-sair {
+        align-self: flex-end;
+    }
+
+    .titulo {
+        font-size: 26px;
+    }
+
+    .texto {
+        font-size: 16px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .icone {
+        font-size: 45px;
+    }
+
+    .info {
+        width: 90%;
+    }
+}

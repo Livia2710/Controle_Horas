@@ -1,0 +1,84 @@
+.modal-form label {
+    color: var(--black);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* estrutura do form */
+.modal-form .wrapper-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* inputs */
+.modal-form .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.modal-form input {
+    width: 100%;
+    padding: 10px;
+
+    background-color: var(--gray-light);
+    border-radius: 8px;
+    border: none;
+}
+
+/* textarea */
+.modal-form textarea {
+    width: 100%;
+    padding: 10px;
+
+    background-color: var(--gray-light);
+    border-radius: 8px;
+    border: none;
+
+    font-family: var(--font-primary);
+}
+
+/* file */
+.modal-form .file-container {
+    position: relative;
+    padding: 10px;
+    background: var(--gray-light);
+    border-radius: 8px;
+}
+
+.modal-form .file-input-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+/* botões */
+.modal-form .action-group {
+    display: flex;
+    gap: 10px;
+}
+
+.modal-form .primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.modal-form .outline {
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    width: 150px;
+    border-radius: 5px;
+    height:4vh;
+}

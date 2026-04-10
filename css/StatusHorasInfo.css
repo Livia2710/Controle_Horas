@@ -1,0 +1,149 @@
+:root {
+  --primary: #FF8800;
+  --secondary: #FD001A;
+  --gray-light: #E3E3E3;  
+  --bg-main: #f2f2f2;
+  --validado: #6DB500;
+  --font-primary: 'Instrument Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-main);
+    margin: 0;
+
+    /* 🔥 substitui o container */
+    padding: 30px 80px;
+}
+
+/* TOPO */
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-back {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.logo img {
+    height: 45px; /* proporcional agora */
+}
+
+/* TÍTULO */
+h1 {
+    color: var(--primary);
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.status-validado {
+    color: var(--validado);
+    font-weight: bold;
+    
+}
+
+
+/* COMPROVANTE */
+.comprovante {
+    background: #ccc;
+    height: 420px;
+    width: 450px;
+    position: relative;
+}
+
+.comprovante::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    top: 30px;
+    right: 40px;
+}
+
+.comprovante::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 2px;
+    background: #666;
+    bottom: 60px;
+    left: 40px;
+    transform: rotate(30deg);
+}
+
+/* BOX */
+.box {
+    background: #ddd;
+    padding: 20px;
+    border-radius: 8px;
+
+    width: 650px;       /* mesma largura do comprovante */
+    height: 185px;      /* metade + espaço entre elas */
+
+    box-sizing: border-box;
+}
+
+.titulo-box {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding-top: 18px;
+}
+
+.conteudo {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 450px 1fr; /* igual ao width do comprovante */
+    gap: 60px;
+    align-items: stretch; /* 🔥 importante */
+}
+
+.conteudo > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.conteudo > div:last-child {
+    max-width: 500px; /* controla largura igual aos campos */
+}
+.coluna {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo > div:last-child {
+    margin-left: -10px; /* ajuste fino */
+}
+
+.conteudo > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px; /* mesma altura do comprovante */
+}

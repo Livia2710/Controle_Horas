@@ -39,3 +39,60 @@
 body {
   font-family: var(--font-primary);
 }
+
+.header-global {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 0;
+}
+
+.logo {
+    height: 60px;
+}
+
+.btn-back {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.btn-back:hover {
+    color: var(--primary-hover);
+}
+
+/* CONTAINER GLOBAL */
+.page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* HEADER GLOBAL */
+.header-global {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    height: 150px;
+}
+
+.btn-back {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* CARD PADRÃO */
+.card {
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--white);
+    border: 2px solid transparent;
+    box-shadow: var(--shadow);
+}
