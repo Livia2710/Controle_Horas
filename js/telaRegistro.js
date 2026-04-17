@@ -6,6 +6,13 @@ const cancelBtn = document.getElementById('cancelButton');
 
 const toast = document.getElementById("toast");
 
+const selectFileBtn = document.getElementById("selectFileBtn");
+
+// Selecionar arquivo
+selectFileBtn.addEventListener("click", () => {
+    fileInput.click();
+});
+
 // Atualizar nome do arquivo
 fileInput.addEventListener('change', function () {
     if (this.files && this.files[0]) {
