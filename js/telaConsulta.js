@@ -1,3 +1,19 @@
+function animarNumero(elemento, valorFinal, sufixo = "", duracao = 1500) {
+  let inicio = 0;
+  const incremento = valorFinal / (duracao / 16);
+
+  const timer = setInterval(() => {
+    inicio += incremento;
+
+    if (inicio >= valorFinal) {
+      inicio = valorFinal;
+      clearInterval(timer);
+    }
+
+    elemento.innerText = Math.floor(inicio) + sufixo;
+  }, 16);
+}
+
 
 function atualizarTela(dados) {
   const horas = dados.horas || 0;
@@ -17,17 +33,21 @@ function atualizarTela(dados) {
   const barra = document.querySelector(".barra-preenchida");
 
   // atualização dos dados
-  elHoras.innerText = horas + "h";
-  elProjetos.innerText = projetos;
+  animarNumero(elHoras, horas, "h");
+  animarNumero(elProjetos, projetos, "", 700);
+  animarNumero(elPercentual, Math.round(percentual), "%");
   elMeta.innerText = `Meta: ${meta} horas`;
-  elPercentual.innerText = Math.round(percentual) + "%";
 
   elRestante.innerText =
     restante > 0
       ? `Faltam ${restante}h para atingir a meta`
       : "Meta atingida 🎉";
 
-  barra.style.width = percentual + "%";
+  barra.style.width = "0%";
+
+  setTimeout(() => {
+    barra.style.width = percentual + "%";
+  }, 200);
 
   // cor verde quando atingir a meta
   if (horas >= meta && meta > 0) {
