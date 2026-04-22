@@ -2,75 +2,130 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Status de Horas Lançadas - info</title>
-
+<title>Status de Horas Lançadas</title>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/StatusHorasInfo.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../css/StatusHorasInfo.css">
 </head>
 
 <body>
 
-<div class="topo">
-     <a href="MenuInicial.html" class="btn-back">
-                <span class="arrow">&larr;</span> Voltar
-            </a>
+<header class="header">
+
+    <!-- BOTÃO VOLTAR -->
+    <div class="header-left">
+        <a href="#" class="btn-voltar">← Voltar</a>
+    </div>
+
+    <!-- PERFIL -->
+    <div class="user-area">
+        <div class="profile-container" id="profileButton">
+
+            <!-- FOTO DO USUÁRIO -->
+            <img 
+                id="profileImage" 
+                src="https://i.pravatar.cc/150?img=32" 
+                alt="Foto da aluna"
+            >
+
+            <!-- TEXTO -->
+            <div class="profile-text">
+                <span id="profileName">
+                    Débora Fraga Moreira de Sousa
+                </span>
+
+                <small class="profile-role">
+                    Aluno
+                </small>
+            </div>
+
+        </div>
+    </div>
+
+</header>
+
+
+<div class="container">
+
+    <h1>Status de Horas Lançadas</h1>
+
+    <div class="sidebar">
+
+        <div class="logo">
+        <img src="assets/controle_horas_logo.png" class="logo-img">
+       
+    </div>
+
+    <hr class="linha">
+
+    <nav class="menu">
+        <a href="#" class="active">
+            <span class="icon">▦</span>
+            Dashboard
+        </a>
+
+        <a href="#">
+            <span class="icon">＋</span>
+            Lançar horas
+        </a>
+    </nav>
+
+    <div class="sair">
+        <a href="#">Sair</a>
+    </div>
+
 </div>
 
-<h1>Status de Horas Lançadas</h1>
+    <div class="conteudo">
 
-<div class="grid">
-    <div class="campo">
-        <div class="label">Aluno</div>
-        <div>Débora Fraga Moreira de Sousa</div>
-    </div>
+        <!-- ESQUERDA -->
+        <div class="info">
+            <div class="bloco">
+                <h3>Aluno</h3>
+                <p>Débora Fraga Moreira de Sousa</p>
+            </div>
 
-    <div class="campo">
-        <div class="label">Curso</div>
-        <div>Análise e Desenvolvimento de Sistemas</div>
-    </div>
+            <div class="bloco">
+                <h3>Projeto</h3>
+                <p>Controle de Horas</p>
+            </div>
 
-    <div class="campo">
-        <div class="label">Data da Postagem</div>
-        <div>26/03/2025</div>
-    </div>
+            <div class="bloco">
+                <h3>Curso</h3>
+                <p>Análise e Desenvolvimento de Sistemas</p>
+            </div>
 
-    <div class="campo">
-        <div class="label">Projeto</div>
-        <div>Controle de Horas</div>
-    </div>
+            <div class="bloco">
+                <h3>Data do Retorno</h3>
+                <p>26/03/2025</p>
+            </div>
 
-    <div class="campo">
-        <div class="label">Data do Retorno</div>
-        <div>26/03/2025</div>
-    </div>
+            <div class="bloco">
+                <h3>Data da Postagem</h3>
+                <p>26/03/2025</p>
+            </div>
 
-    <div class="campo">
-        <div class="label">Status</div>
-        <div class="status-validado">Validado</div>
-    </div>
-</div>
-
-<div class="conteudo">
-    <div class="coluna">
-        <div class="titulo-box">Comprovante</div>
-        <div class="comprovante"></div>
-    </div>
-
-    <div class="coluna">
-        <div>
-            <div class="titulo-box">Observações</div>
-            <div class="box">
-                Atividade realizada no evento X, com carga de 20h, auxiliando na organização e recepção...
+            <div class="bloco">
+                <h3>Status</h3>
+                <p class="status">Validado</p>
             </div>
         </div>
 
-        <div>
-            <div class="titulo-box">Comentários</div>
-            <div class="box">
-                <b>Horas validadas. A atividade apresentada está de acordo com os critérios de extensão.</b>
+        <!-- DIREITA -->
+        <div class="lado-direito">
+            <h3>Comprovante</h3>
+            <div class="comprovante">
+                <img src="https://via.placeholder.com/400x250" alt="">
+            </div>
+
+            <h3>Comentário</h3>
+            <div class="comentario">
+                Horas validadas. A atividade apresentada está de acordo com os critérios de extensão.
             </div>
         </div>
+
     </div>
+
 </div>
 
 </body>
