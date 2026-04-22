@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #eaeaea;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sair {
+  margin-top: auto;
+}
+
+.topo-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.linha {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 25px 0 25px 0; /* 🔥 bem colado */
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* LOGO */
+.logo-img {
+  width: 160px; /* ajusta o tamanho */
+}
+
+
+
+.menu a {
+  text-decoration: none;
+  color: #444;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+/* ITEM ATIVO */
+.menu a.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* ÍCONE */
+.icon {
+  font-size: 14px;
+}
+
+/* SAIR */
+.sair a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+}
+
+.container {
+  padding: 30px 60px;
+  margin-left: 240px; /* empurra tudo pro lado */
+  margin-top: 85px; /* espaço pro header */
+}
+
+.voltar {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
