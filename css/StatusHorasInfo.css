@@ -1,149 +1,254 @@
 :root {
   --primary: #FF8800;
-  --secondary: #FD001A;
-  --gray-light: #E3E3E3;  
-  --bg-main: #f2f2f2;
+  --bg: #f2f2f2;
+  --gray: #d9d9d9;
+  --text: #222;
   --validado: #6DB500;
-  --font-primary: 'Instrument Sans', sans-serif;
+  --font: 'Instrument Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: var(--font-primary);
-    background-color: var(--bg-main);
-    margin: 0;
-
-    /* 🔥 substitui o container */
-    padding: 30px 80px;
+  background-color: var(--bg);
+  font-family: var(--font);
+  color: var(--text);
 }
 
-/* TOPO */
-.topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  left: 220px; /* respeita a sidebar */
+  width: calc(100% - 220px);
+  height: 80px;
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-bottom: 1px solid #ddd;
+  z-index: 999;
 }
 
-.btn-back {
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
+/* BOTÃO VOLTAR */
+.btn-voltar {
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.logo img {
-    height: 45px; /* proporcional agora */
+/* PERFIL */
+.user-area {
+  display: flex;
+  align-items: center;
 }
 
-/* TÍTULO */
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* FOTO */
+.profile-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary);
+}
+
+.profile-container span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.profile-role {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  margin-top: 2px;
+}
+
+.login-icon {
+  color: var(--primary);
+  font-size: 32px;
+}
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #eaeaea;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sair {
+  margin-top: auto;
+}
+
+.topo-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.linha {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0 10px 0; /* 🔥 bem colado */
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* LOGO */
+.logo-img {
+  width: 160px; /* ajusta o tamanho */
+}
+
+
+
+.menu a {
+  text-decoration: none;
+  color: #444;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+/* ITEM ATIVO */
+.menu a.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* ÍCONE */
+.icon {
+  font-size: 14px;
+}
+
+/* SAIR */
+.sair a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+}
+
+.container {
+  padding: 30px 60px;
+  margin-left: 240px; /* empurra tudo pro lado */
+  margin-top: 85px; /* espaço pro header */
+}
+
+.voltar {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
 h1 {
-    color: var(--primary);
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-    margin-bottom: 30px;
-}
-
-.campo {
-    display: flex;
-    flex-direction: column;
-}
-
-.label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    font-size: 18px;
-}
-
-.status-validado {
-    color: var(--validado);
-    font-weight: bold;
-    
-}
-
-
-/* COMPROVANTE */
-.comprovante {
-    background: #ccc;
-    height: 420px;
-    width: 450px;
-    position: relative;
-}
-
-.comprovante::before {
-    content: "";
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border: 2px solid #666;
-    border-radius: 50%;
-    top: 30px;
-    right: 40px;
-}
-
-.comprovante::after {
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 2px;
-    background: #666;
-    bottom: 60px;
-    left: 40px;
-    transform: rotate(30deg);
-}
-
-/* BOX */
-.box {
-    background: #ddd;
-    padding: 20px;
-    border-radius: 8px;
-
-    width: 650px;       /* mesma largura do comprovante */
-    height: 185px;      /* metade + espaço entre elas */
-
-    box-sizing: border-box;
-}
-
-.titulo-box {
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-size: 18px;
-    padding-top: 18px;
+  color: var(--primary);
+  font-size: 26px;
+  margin-bottom: 40px;
 }
 
 .conteudo {
-    padding-top: 30px;
-    display: grid;
-    grid-template-columns: 450px 1fr; /* igual ao width do comprovante */
-    gap: 60px;
-    align-items: stretch; /* 🔥 importante */
+  display: flex;
+  gap: 150px; /* controla a distância entre os blocos */
 }
 
-.conteudo > div:last-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.conteudo > div:last-child {
-    max-width: 500px; /* controla largura igual aos campos */
-}
-.coluna {
-    display: flex;
-    flex-direction: column;
+.info {
+  width: 40%;
 }
 
-.conteudo > div:last-child {
-    margin-left: -10px; /* ajuste fino */
+.bloco {
+  margin-bottom: 45px;
 }
 
-.conteudo > div:last-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 400px; /* mesma altura do comprovante */
+.bloco h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.bloco p {
+  font-size: 16px;
+}
+
+.status {
+  color: var(--validado);
+  font-weight: 500;
+}
+
+.lado-direito {
+  width: 45%;
+}
+
+.lado-direito h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.comprovante {
+  width: 70%; /* diminui o tamanho */
+  aspect-ratio: 1 / 1;
+  background-color: var(--gray);
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comprovante img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comentario {
+  width: 70%; /* mesma largura do comprovante */
+  background-color: var(--gray);
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.4;
 }
