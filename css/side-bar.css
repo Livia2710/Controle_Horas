@@ -38,6 +38,10 @@
 }
 
 /* LOGO */
+.logo {
+  height:60px;
+}
+
 .logo-img {
   width: 160px; /* ajusta o tamanho */
 }
@@ -85,4 +89,74 @@
   font-size: 14px;
   display: inline-block;
   margin-bottom: 20px;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+    height: 100vh;      /* Garante que ela ocupe a altura toda da tela */
+    position: fixed;    /* Trava ela na lateral esquerda */
+    left: 0;
+    top: 0;
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;      /* Garante que ela fique por cima de tudo */
+  }
+
+  .menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .menu a {
+    width: 45px;
+    height: 45px;
+    font-size: 0 !important; /* Esconde o texto "Dashboard" */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0;
+  }
+
+  .icon {
+    font-size: 22px !important;
+    margin: 0 !important;
+  }
+
+  .logo-img{
+    width: 100px;
+  }
+
+  /* Ajuste do botão SAIR para sumir o texto e ficar centralizado */
+  .sair {
+    margin-top: auto;   /* Joga o botão sair para o final da barra */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+
+  .sair a {
+    font-size: 0 !important; /* Esconde a palavra "Sair" */
+  }
+
+  .sair a::before {
+    content: "⬅";       /* Coloca um ícone no lugar do texto */
+    font-size: 20px;
+    color: #666;
+  }
+
+  /* Ajuste do container para não ficar atrás da sidebar */
+  .container {
+    margin-left: 70px !important; 
+    padding: 20px;
+    width: calc(100% - 70px);
+  }
 }
